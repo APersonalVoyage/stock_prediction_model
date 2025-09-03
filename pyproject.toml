@@ -1,0 +1,13 @@
+[project]
+name = "stock-predictor"
+version = "0.1.0"
+description = "End-to-end stock prediction project: ingestion, features, modeling, backtesting, CLI, and Streamlit app."
+authors = [{ name = "Your Name" }]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"

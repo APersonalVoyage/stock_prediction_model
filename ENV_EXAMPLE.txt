@@ -1,0 +1,11 @@
+Copy this to a file named .env at the project root and fill in the values:
+
+ALPACA_API_KEY=
+ALPACA_SECRET_KEY=
+# Paper URL by default. For live trading, use https://api.alpaca.markets
+ALPACA_BASE_URL=https://paper-api.alpaca.markets
+ALPACA_PAPER=true
+
+# Zerodha Kite (Indian markets)
+KITE_API_KEY=
+KITE_ACCESS_TOKEN=
