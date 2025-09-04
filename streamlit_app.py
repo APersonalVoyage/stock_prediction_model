@@ -2,11 +2,21 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
+import sys
 
-from src.stock_predictor.models.train import train_ticker, load_model
-from src.stock_predictor.models.evaluate import evaluate_saved_model
-from src.stock_predictor.backtest.backtest import backtest
-from src.stock_predictor.config import MODELS_DIR
+# Ensure package import works when running directly with Streamlit/Cloud
+try:
+    from stock_predictor.models.train import train_ticker, load_model
+    from stock_predictor.models.evaluate import evaluate_saved_model
+    from stock_predictor.backtest.backtest import backtest
+    from stock_predictor.config import MODELS_DIR
+except Exception:
+    ROOT = Path(__file__).resolve().parent / "src"
+    sys.path.append(str(ROOT))
+    from stock_predictor.models.train import train_ticker, load_model
+    from stock_predictor.models.evaluate import evaluate_saved_model
+    from stock_predictor.backtest.backtest import backtest
+    from stock_predictor.config import MODELS_DIR
 
 st.set_page_config(page_title="Stock Predictor", layout="wide")
 
