@@ -9,10 +9,10 @@ import joblib
 import numpy as np
 import pandas as pd
 
-from ..config import MODELS_DIR
-from ..data.ingest import download_prices
-from ..features.engineering import build_training_frame, split_features_target
-from ..live.settings import has_alpaca_credentials
+from stock_predictor.config import MODELS_DIR
+from stock_predictor.data.ingest import download_prices
+from stock_predictor.features.engineering import build_training_frame, split_features_target
+from stock_predictor.live.settings import has_alpaca_credentials
 
 
 @dataclass
