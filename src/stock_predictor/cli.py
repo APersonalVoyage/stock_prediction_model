@@ -7,16 +7,16 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
-from .config import MODELS_DIR
-from .data.ingest import download_prices
-from .features.engineering import build_training_frame, split_features_target
-from .models.train import TrainResult, load_model, train_ticker
-from .models.evaluate import evaluate_saved_model
-from .backtest.backtest import backtest
-from .live.pipeline import LiveConfig, run_live
-from .live.settings import has_alpaca_credentials
-from .scan.market_scan import ScanConfig, scan_market
-from .portfolio.rebalance import rebalance_from_scan
+from stock_predictor.config import MODELS_DIR
+from stock_predictor.data.ingest import download_prices
+from stock_predictor.features.engineering import build_training_frame, split_features_target
+from stock_predictor.models.train import TrainResult, load_model, train_ticker
+from stock_predictor.models.evaluate import evaluate_saved_model
+from stock_predictor.backtest.backtest import backtest
+from stock_predictor.live.pipeline import LiveConfig, run_live
+from stock_predictor.live.settings import has_alpaca_credentials
+from stock_predictor.scan.market_scan import ScanConfig, scan_market
+from stock_predictor.portfolio.rebalance import rebalance_from_scan
 
 app = typer.Typer(add_completion=False, help="Stock predictor CLI")
 console = Console()

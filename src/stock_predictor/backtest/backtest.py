@@ -7,9 +7,9 @@ from typing import Optional
 import numpy as np
 import pandas as pd
 
-from ..features.engineering import build_training_frame, split_features_target
-from ..data.ingest import download_prices
-from ..models.train import load_model
+from stock_predictor.features.engineering import build_training_frame, split_features_target
+from stock_predictor.data.ingest import download_prices
+from stock_predictor.models.train import load_model
 
 
 @dataclass
